@@ -142,7 +142,8 @@ export default {
       tolerateMinification,
       codeHardeningThreshold,
       useProfilingData,
-      useAppClassification
+      useAppClassification,
+      appClassificationBrowserMinimumVersion
     } = finalConfig;
 
     const {accessKey, secretKey} = keys;
@@ -276,8 +277,13 @@ export default {
     if (useProfilingData !== undefined) {
       updateData.useProfilingData = useProfilingData;
     }
+
     if (useAppClassification !== undefined) {
       updateData.useAppClassification = useAppClassification;
+    }
+
+    if (appClassificationBrowserMinimumVersion !== undefined) {
+      updateData.appClassificationBrowserMinimumVersion;
     }
 
     if (
